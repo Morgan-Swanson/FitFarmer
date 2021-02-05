@@ -1,10 +1,11 @@
-from fitfarmer import get_patients, diagnose, recommend
+from fitfarmer.data import get_patient_csv_data
+from fitfarmer.diagnose import diagnose
 
 def main():
-    patients = get_data_from_csv('../data/')
-    diagnostics = [diganose(p) for patient in data]
+    patients = get_patient_csv_data('data/patient_mock_data.csv')
+    diagnostics = [diagnose(p) for p in patients]
     for d in diagnostics:
-        print(recommend(d))
+        print(d)
 
 
 if __name__ == "__main__":
