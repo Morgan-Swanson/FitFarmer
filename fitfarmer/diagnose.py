@@ -1,7 +1,7 @@
-def diagnose_diabetes(A1c):
-    if A1c > 6.5:
+def diagnose_diabetes(a1c):
+    if a1c > 6.5:
         return 'diabetic'
-    elif A1c > 5.7:
+    elif a1c > 5.7:
         return 'prediabetic'
     else:
         return None
