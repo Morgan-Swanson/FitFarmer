@@ -8,5 +8,5 @@ def get_patient_csv_data(path):
                                   'EnergyCHO', 'EnergyPro', 'EnergyFat', 'VitD', 'VitE',
                                   'VitA', 'VitK', 'VitB12', 'Folate'], header=0)
     patient_data = df.to_dict(orient='records')
-    print(patient_data[:1])
+    return patient_data
 
