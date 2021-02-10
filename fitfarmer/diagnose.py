@@ -22,9 +22,8 @@ class Disease(Enum):
     PrePreDIABETIC = 8
     TempPrePREDIABETIC = 9
 
-    # Vitamin deficiencies
-    VITAMIN_K_DEFICIENT = 10
-    VITAMIN_B12_DEFICIENT = 11
+    # Hypertension
+    Hypertension = 10
 
 
 def diagnose_diabetes(a1c):
@@ -48,6 +47,15 @@ def diagnose_pre_diabetes(fpg):
         return "FPG is High: " + Disease.PrePreDIABETIC.name
     elif fpg > 100:
         return "FPG is borderline: " + Disease.TempPrePREDIABETIC.name
+
+
+def diagnose_hypertension(sysBP, diaBP):
+    if (sysBP > 180) and (diaBP > 120):
+        return "Hypertensive Crisis: " + Disease.Hypertension.name
+    elif (sysBP > 140) and (diaBP > 90):
+        return "Hypertensive Stage 2: " + Disease.Hypertension.name
+    elif (sysBP > 130) and (diaBP > 80):
+        return "Hypertensive Stage 1: " + Disease.Hypertension.name
 
 
 def diagnose_dietary_vitA(vitA):
@@ -94,6 +102,7 @@ def diagnose(patient):
     diagnostics.append(diagnose_diabetes(patient['HbA1c']))
     diagnostics.append(diagnose_obesity(patient['BMI']))
     diagnostics.append(diagnose_pre_diabetes(patient['FPG']))
+    diagnostics.append(diagnose_hypertension(patient['SysBP'], ['DiaBP']))
 #    diagnostics.append(diagnose_dietary_vitA(patient['VitA']))
     diagnostics.append(diagnose_dietary_vitB12(patient['VitB12']))
     diagnostics.append(diagnose_dietary_vitD(patient['VitD']))
