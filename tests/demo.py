@@ -1,5 +1,7 @@
 import sys
-sys.path.append("../") #the folders below will not import unless I do this
+sys.path.append("../") # the folders below will not import unless I do this
+                        # and I also need to be in the "tests" folder to run it otherwise 
+                        # ModuleNotFoundError: No module named 'fitfarmer'
 from fitfarmer.data import get_patient_csv_data
 from fitfarmer.diagnose import diagnose
 
