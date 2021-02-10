@@ -81,6 +81,13 @@ def diagnose_dietary_vitK(vitK):
         return "Vitamin K: " + Disease.LOW.name
 
 
+def diagnose_dietary_folate(folate):
+    if folate < 400:
+        return "Folate level: " + Disease.LOW.name
+    elif folate > 1000:
+        return "Folate level: " + Disease.HIGH.name
+
+
 def diagnose(patient):
     '''returns a list of diagnostics given a dictionary of patient data'''
     diagnostics = []
@@ -92,5 +99,6 @@ def diagnose(patient):
     diagnostics.append(diagnose_dietary_vitD(patient['VitD']))
     diagnostics.append(diagnose_dietary_vitE(patient['VitE']))
     diagnostics.append(diagnose_dietary_vitK(patient['VitK']))
+    diagnostics.append(diagnose_dietary_folate(patient['Folate']))
     diagnostics = [d for d in diagnostics if d is not None]
     return diagnostics
