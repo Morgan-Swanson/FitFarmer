@@ -1,13 +1,16 @@
 import sys
-sys.path.append("../") # the folders below will not import unless I do this
-                        # and I also need to be in the "tests" folder to run it otherwise 
-                        # ModuleNotFoundError: No module named 'fitfarmer'
+import os
+
+dir_path = os.path.dirname(os.path.realpath(__file__))
+sys.path.insert(1, os.path.dirname(dir_path))
+
 from fitfarmer.data import get_patient_csv_data
 from fitfarmer.diagnose import diagnose
+import data
 
 
 def main():
-    patients = get_patient_csv_data('../data/patient_mock_data.csv') #"../data" is necessary because data folder is one layer above
+    patients = get_patient_csv_data(os.path.dirname(dir_path) + '/data/patient_mock_data.csv')
     diagnostics = [diagnose(p) for p in patients]
     for d in diagnostics:
         print(d)
