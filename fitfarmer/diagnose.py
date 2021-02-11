@@ -1,8 +1,6 @@
 from enum import Enum
 
 class Disease(Enum):
-    def __str__(self):
-        return str(self.value)
     # Diabetes
     DIABETIC = 1
     PREDIABETIC = 2
