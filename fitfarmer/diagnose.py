@@ -46,16 +46,16 @@ def diagnose_pre_diabetes(fpg):
     if fpg > 125:
         return "FPG is High: " + Disease.PrePreDIABETIC.name
     elif fpg > 100:
-        return "FPG is borderline: " + Disease.TempPrePREDIABETIC.name
+        return "FPG is borderline"
 
 
 def diagnose_hypertension(sysBP, diaBP):
     if (sysBP > 180) and (diaBP > 120):
-        return "Hypertensive Crisis: " + Disease.Hypertension.name
+        return "Hypertensive Crisis"
     elif (sysBP > 140) and (diaBP > 90):
-        return "Hypertensive Stage 2: " + Disease.Hypertension.name
+        return "Hypertensive Stage 2"
     elif (sysBP > 130) and (diaBP > 80):
-        return "Hypertensive Stage 1: " + Disease.Hypertension.name
+        return "Hypertensive Stage 1"
 
 
 def diagnose_dietary_vitA(vitA):
@@ -102,7 +102,8 @@ def diagnose(patient):
     diagnostics.append(diagnose_diabetes(patient['HbA1c']))
     diagnostics.append(diagnose_obesity(patient['BMI']))
     diagnostics.append(diagnose_pre_diabetes(patient['FPG']))
-    diagnostics.append(diagnose_hypertension(patient['SysBP'], ['DiaBP']))
+    diagnostics.append(diagnose_hypertension(
+        patient['SysBP'], patient['DiaBP']))
 #    diagnostics.append(diagnose_dietary_vitA(patient['VitA']))
     diagnostics.append(diagnose_dietary_vitB12(patient['VitB12']))
     diagnostics.append(diagnose_dietary_vitD(patient['VitD']))
