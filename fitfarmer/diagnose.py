@@ -12,6 +12,7 @@ class Disease(Enum):
     
     
 def diagnose_diabetes(a1c):
+    print(a1c)
     if a1c > 6.5:
         return Disease.DIABETIC
     elif a1c > 5.7:
