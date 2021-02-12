@@ -104,7 +104,7 @@ def diagnose(patient):
     diagnostics.append(diagnose_pre_diabetes(patient['FPG']))
     diagnostics.append(diagnose_hypertension(
         patient['SysBP'], patient['DiaBP']))
-#    diagnostics.append(diagnose_dietary_vitA(patient['VitA']))
+    diagnostics.append(diagnose_dietary_vitA(patient['VitA']))
     diagnostics.append(diagnose_dietary_vitB12(patient['VitB12']))
     diagnostics.append(diagnose_dietary_vitD(patient['VitD']))
     diagnostics.append(diagnose_dietary_vitE(patient['VitE']))
