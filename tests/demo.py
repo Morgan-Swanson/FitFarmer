@@ -1,6 +1,7 @@
 import sys
 import os
 
+#the functions below are necessary to run the python program with the linux terminal at any location
 dir_path = os.path.dirname(os.path.realpath(__file__))
 FitFarmerFolder = os.path.dirname(dir_path)
 sys.path.insert(1, FitFarmerFolder)
