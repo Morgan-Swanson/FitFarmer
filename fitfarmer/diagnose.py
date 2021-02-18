@@ -58,6 +58,33 @@ def diagnose_hypertension(sysBP, diaBP):
         return "Hypertensive Stage 1"
 
 
+def diagnose_dyslipidemia(Total, LDL, HDL, TAG):
+    if (Total < 200) and (LDL < 100) and (HDL > 60) and (TAG < 150):
+        return "Desireable Cholestrol"
+    elif (Total > 239) and (LDL > 160) and (HDL < 40) and (TAG > 200):
+        return "Dyslipidemia Crisis - all levels at risk"
+    elif (Total > 239):
+        if (LDL > 160) or (HDL < 40) or (TAG > 200):
+            return "Dyslipidemia Crisis - Total cholestrol and one additional level at risk"
+    elif (LDL > 160):
+        if (Total > 239) or (HDL < 40) or (TAG > 200):
+            return "Dyslipidemia Crisis - LDL too high and one additional level at risk"
+    elif (HDL < 40):
+        if (Total > 239) or (LDL > 160) or (TAG > 200):
+            return "Dyslipidemia Crisis - HDL too low and one additional level at risk"
+    elif (Total > 200):
+        if (LDL > 100) or (HDL > 40) or (TAG > 150):
+            return "Dyslipidemia Borderline - two or more levels borderline."
+    elif (LDL > 100):
+        if (Total > 200) or (HDL > 40) or (TAG > 150):
+            return "Dyslipidemia Borderline - two or more levels borderline."
+    elif (HDL > 40):
+        if (Total > 200) or (LDL > 100) or (TAG > 150):
+            return "Dyslipidemia Borderline - two or more levels borderline."
+    elif (Total > 200) or (LDL > 100) or (HDL > 40) or (TAG > 150):
+        return "Dyslipidemia Borderline - one level borderline."
+
+
 def diagnose_dietary_vitA(vitA):
     if vitA < 900:
         return "Vitamin A: " + Disease.LOW.name
@@ -111,6 +138,8 @@ def diagnose(patient):
     diagnostics.append(diagnose_pre_diabetes(patient['FPG']))
     diagnostics.append(diagnose_hypertension(
         patient['SysBP'], patient['DiaBP']))
+    diagnostics.append(diagnose_dyslipidemia(
+        patient['Cholesterol'], patient['LDL'], patient['HDL'], patient['TAG']))
     diagnostics.append(diagnose_dietary_vitA(patient['VitA']))
     diagnostics.append(diagnose_dietary_vitB12(patient['VitB12']))
     diagnostics.append(diagnose_dietary_vitD(patient['VitD']))
