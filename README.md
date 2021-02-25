@@ -7,6 +7,8 @@ To run the demo, from project root:
 python3 -m tests.demo
 ```
 
+# Run the webserver
+
 
 To run the webserver install
 ```
