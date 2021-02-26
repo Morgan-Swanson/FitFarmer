@@ -1,0 +1,30 @@
+['Not included in a food category' 'Tap water' 'Bottled water' 'Enhanced or fortified water' 'Baby water']
+
+grain = ['Pasta, noodles, cooked grains' 'Rice mixed dishes' 'Fried rice and lo/chow mein' 'Smoothies and grain drinks' 'Turnovers and other grain-based items' 'Crackers, excludes saltines' 'Popcorn' ]
+
+fruit = ['Other fruits and fruit salads' 'Citrus fruits' 'Jams, syrups, toppings' 'Citrus juice' 'Other fruit juice' 'Dried fruits' 'Apples' 'Bananas' 'Melons' 'Berries' 'Grapes' 'Peaches and nectarines'  'Apple juice' 'Baby food: fruit' 'Baby juice']
+
+veg = ['Vegetable mixed dishes' 'Olives, pickles, pickled vegetables'  'String beans' 'Other vegetables and combinations' 'Other starchy vegetables' 'Dark green vegetables, excludes lettuce' 'Lettuce and lettuce salads' 'Carrots' 'Vegetable juice' 'Other red and orange vegetables' 'Tomatoes' 'Tomato-based condiments' 'Corn' 'Onions' 'Baby food: vegetable' ]
+
+dairy = ['Human milk' 'Milk, reduced fat' 'Milk, whole' 'Milk, lowfat'
+ 'Milk, nonfat' 'Flavored milk, whole' 'Milk substitutes'
+ 'Yogurt, regular' 'Yogurt, Greek' 'Ice cream and frozen dairy desserts'
+ 'Baby food: yogurt' 'Flavored milk, nonfat' 'Flavored milk, reduced fat' 'Flavored milk, lowfat' 'Milk shakes and other dairy drinks' 'Cheese sandwiches (single code)' 'Cream and cream substitutes' 'Cream cheese, sour cream, whipped cream' 'Cheese' 'Cottage/ricotta cheese'  'Mayonnaise']
+
+wine = ['Wine' 'Liquor and cocktails' ] 
+
+seafood = ['Fish' 'Shellfish' 'Seafood mixed dishes' ]
+
+poultry = ['Turkey, duck, other poultry' 'Chicken/turkey sandwiches (single code)' 'Chicken patties, nuggets and tenders' 'Poultry mixed dishes' 'Chicken, whole pieces' ]
+
+legumes = ['Beans, peas, legumes' 'Nuts and seeds' ]
+
+starch = ['Dips, gravies, other sauces' 'Yeast breads' 'Rolls and buns' 'Pizza' 'Potato chips'  'White potatoes, baked or boiled' 'Mashed potatoes and white potato mixtures' 'French fries and other fried white potatoes'  'Bagels and English muffins' 'Rice' 'Pasta mixed dishes, excludes macaroni and cheese' 'Macaroni and cheese' 'Tortilla, corn, other chips' 'Tortillas' 'Ready-to-eat cereal, lower sugar (=<21.2g/100g)''Other sandwiches (single code)' 'Beer' 'Other Mexican mixed dishes' 'Nachos' 'Egg rolls, dumplings, sushi' 'Grits and other cooked cereals' 'Oatmeal' 'Baby food: cereals' 'Burritos and tacos' 'Saltine crackers' 'Pretzels/snack mix'  'Biscuits, muffins, quick breads' 'Formula, ready-to-feed' 'Formula, prepared from powder' 'Formula, prepared from concentrate' 'Processed soy products' 'Soy-based condiments' ]
+
+egg = ['Eggs and omelets' 'Egg/breakfast sandwiches (single code)' ]
+
+sweet = ['Candy not containing chocolate' 'Cookies and brownies'  'Pudding' 'Cakes and pies' 'Baby food: snacks and sweets' 'Gelatins, ices, sorbets' 'Sugars and honey' 'Sugar substitutes' 'Candy containing chocolate' 'Doughnuts, sweet rolls, pastries'  'Nutritional beverages' 'Protein and nutritional powders' 'Sport and energy drinks' 'Diet sport and energy drinks' 'Soft drinks' 'Diet soft drinks' 'Flavored or carbonated water' 'Pancakes, waffles, French toast' 'Ready-to-eat cereal, higher sugar (>21.2g/100g)' 'Peanut butter and jelly sandwiches (single code)' 'Fruit drinks' 'Other diet drinks' 'Cereal bars' 'Nutrition bars' 'Mustard and other condiments' 'Coffee' 'Tea' ]
+
+meat = ['Lamb, goat, game'  'Meat mixed dishes' 'Cold cuts and cured meats' 'Liver and organ meats' 'Frankfurters' 'Sausages' 'Frankfurter sandwiches (single code)'  'Baby food: meat and dinners' 'Ground beef' 'Bacon' 'Pork' 'Beef, excludes ground' 'Burgers (single code)']
+
+oil = ['Butter and animal fats' 'Salad dressings and vegetable oils' 'Margarine']
