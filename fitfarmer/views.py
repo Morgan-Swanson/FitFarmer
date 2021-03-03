@@ -10,6 +10,8 @@ def index(request):
     return HttpResponse("Hello, world. You're at the polls index.")
 
 
+
+
 def get_details(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':

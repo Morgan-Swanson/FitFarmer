@@ -16,6 +16,9 @@ class NameForm(forms.Form):
     HbA1c = forms.DecimalField(label='HbA1c')
     CRP = forms.DecimalField(label='CRP')
     PulseOx = forms.DecimalField(label='PulseOx')
+
+
+class FoodForm(forms.Form):
     ServGrain = forms.DecimalField(label='ServGrain')
     ServFruit = forms.DecimalField(label='ServFruit')
     ServVeg = forms.DecimalField(label='ServVeg')
