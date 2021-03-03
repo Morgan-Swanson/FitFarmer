@@ -2,6 +2,7 @@ from django import forms
 
 class NameForm(forms.Form):
     name = forms.CharField(label='Your name', max_length=100)
+    gender = forms.
     BMI = forms.DecimalField(label='BMI')
     Weight = forms.DecimalField(label='Weight')
     Waist_cir = forms.DecimalField(label='Waist_ir')

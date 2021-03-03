@@ -19,7 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5f462283-bdf0-405d-a352-331505bebfa9" name="Default Changelist" comment="" />
+    <list default="true" id="5f462283-bdf0-405d-a352-331505bebfa9" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitfarmer/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitfarmer/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitfarmer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitfarmer/models.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,6 +95,7 @@
       <workItem from="1614236428763" duration="2357000" />
       <workItem from="1614555749123" duration="609000" />
       <workItem from="1614650783442" duration="1444000" />
+      <workItem from="1614793850138" duration="2195000" />
     </task>
     <servers />
   </component>
@@ -138,5 +143,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1614236693353" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1614795140041">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1614795140041" />
   </component>
 </project>
