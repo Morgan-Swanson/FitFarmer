@@ -30,12 +30,11 @@ class FoodForm(forms.ModelForm):
     helper.form_method = 'post'
     helper.layout = Layout(
         Row(
-            Column(Fieldset('user','consume_date','servings','food_text'), css_class='col-sm'),
-            
+            Column(Fieldset('user', 'consume_date', 'servings', 'food_text'), css_class='col-sm')
         ),
         ButtonHolder(Submit("Submit", "Submit", css_class="btn-success"))
     )
+
     class Meta:
         model = Food
-        fields = ('user','consume_date','servings','food_text')
-
+        fields = ('user', 'consume_date', 'servings', 'food_text')

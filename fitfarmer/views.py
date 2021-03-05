@@ -28,9 +28,9 @@ class IntakeAdd(FormView):
     template_name='intake.html'
     form_class= FoodForm
     success_url=''
-    def form_valid(self, form1):
+    def form_valid(self, form):
         form.save()
-        return super().form_valid(form1)
+        return super().form_valid(form)
 
 class IntakeList(ListView):
     model = Food 
