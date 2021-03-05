@@ -1,5 +1,3 @@
-import json
-import pandas as pd
 from django.shortcuts import render
 from django.urls import reverse
 # Create your views here.
@@ -7,11 +5,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 from .forms import NameForm
 from .diagnose import diagnose
 
-
-FOOD_BEV = pd.read_csv('data/food_bev_ontology.csv')
-NUTR = pd.read_csv('data/nutrient_ontology.csv')
-with open('data/msdps_categories.json') as infile:
-    MSDPS = json.load(infile)
 
 
 def index(request):
@@ -31,6 +24,3 @@ def save_details(request):
         if form.is_valid():
             form.save()
             return HttpResponseRedirect(reverse("index"))
-
-def macros():
-    print("FUCK YOU")
