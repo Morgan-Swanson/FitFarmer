@@ -23,6 +23,6 @@ python manage.py runserver
 ```
 if you get any errors while running use these commands
 ```
-python magane.py makemigrations
+python manage.py makemigrations
 python manage.py migrate
 ```
