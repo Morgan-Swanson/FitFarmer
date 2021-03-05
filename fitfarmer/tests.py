@@ -1,7 +1,7 @@
 import datetime
 from django.test import TestCase
 from .models import User, Food
-from .medscore import UserMacros
+from .medscore import UserMacros, msdpsCalc
 from .macros import getFoodMacros
 from .diagnose import diagnose
 
@@ -17,5 +17,14 @@ def test_macro_diagnosis():
     print(diagnoses)
 
 
+def test_msdps():
+    week = datetime.datetime.today() - datetime.timedelta(7)
+    msdps_week = Food.objects.filter(consume_date__gte=week)
+    msdps_score = msdpsCalc(msdps_week)
+
+    print(msdps_score)
+
+
+test_msdps()
 test_macro_diagnosis()
 
