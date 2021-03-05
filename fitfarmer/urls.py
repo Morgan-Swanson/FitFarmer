@@ -1,9 +1,8 @@
 from django.urls import path
 
-from fitfarmer import views
-
+from fitfarmer.views import index, UserList, UserAdd
 urlpatterns = [
-    path('', views.index, name='index'),
-    path('register', views.get_details, name='get-registration'),
-    path('register/submit', views.save_details, name='save-registration'),
+    path('', index, name='index'),
+    path('users/', UserList.as_view()),
+    path('register/', UserAdd.as_view())
 ]
