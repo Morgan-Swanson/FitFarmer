@@ -25,7 +25,7 @@ class User(models.Model):
 
 class Food(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    consume_date = models.DateTimeField('date consumed', auto_now_add=True)
+    consume_date = models.DateTimeField('date consumed')
     servings = models.DecimalField('servings', decimal_places=1, max_digits=4, default=0)
     food_text = models.CharField(max_length=100)
 

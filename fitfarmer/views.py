@@ -6,6 +6,7 @@ from .forms import NameForm
 from .diagnose import diagnose
 
 
+
 def index(request):
     return render(request, 'index.html')
 
