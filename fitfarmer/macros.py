@@ -22,23 +22,23 @@ def getFoodMacros(foods):
         food_code = db_food['food_code'].iloc[0]
         food_item = NUTR.loc[NUTR['food_code'] == food_code]
 
-        macros.calories += food_item['energy_kcal'] * float(food.servings)
+        macros.calories += float(food_item['energy_kcal']) * float(servings)
 
-        macros.vitD += food_item['vitamin_d_d2_+_d3_mcg'] * float(food.servings)
-        macros.vitE += food_item['vitamin_e_alpha-tocopherol_mg'] * float(food.servings)
-        macros.vitA += food_item['vitamin_a,_rae_mcg_rae'] * float(food.servings)
-        macros.vitK += food_item['vitamin_k_phylloquinone_mcg'] * float(food.servings)
-        macros.vitB12 += food_item['vitamin_b-12_mcg'] * float(food.servings)
-        macros.folate += food_item['folate,_total_mcg'] * float(food.servings)
+        macros.vitD += float(food_item['vitamin_d_d2_+_d3_mcg']) * float(food.servings)
+        macros.vitE += float(food_item['vitamin_e_alpha-tocopherol_mg']) * float(food.servings)
+        macros.vitA += float(food_item['vitamin_a,_rae_mcg_rae']) * float(food.servings)
+        macros.vitK += float(food_item['vitamin_k_phylloquinone_mcg']) * float(food.servings)
+        macros.vitB12 += float(food_item['vitamin_b-12_mcg']) * float(food.servings)
+        macros.folate += float(food_item['folate,_total_mcg']) * float(food.servings)
 
         # convert grams of nutrient consumed to calories obtained from that nutrient
-        macros.energyCHO += food_item['carbohydrate_g'] * CAL_FROM_G_CHO * float(food.servings)
-        macros.energyPro += food_item['protein_g'] * CAL_FROM_G_PRO * float(food.servings)
-        macros.energyFat += food_item['total_fat_g'] * CAL_FROM_G_FAT * float(food.servings)
+        macros.energyCHO += float(food_item['carbohydrate_g']) * CAL_FROM_G_CHO * float(food.servings)
+        macros.energyPro += float(food_item['protein_g']) * CAL_FROM_G_PRO * float(food.servings)
+        macros.energyFat += float(food_item['total_fat_g']) * CAL_FROM_G_FAT * float(food.servings)
         
     macros.energyCHO = (macros.energyCHO / macros.calories) * 100
-    macros.energyCHO = (macros.energyPro / macros.calories) * 100
-    macros.energyCHO = (macros.energyFat / macros.calories) * 100
+    macros.energyPro = (macros.energyPro / macros.calories) * 100
+    macros.energyFat = (macros.energyFat / macros.calories) * 100
 
     return macros
 
