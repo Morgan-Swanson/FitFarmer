@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+    <h2>Food Intake</h2>
+        <table>
+            <tr>
+             
+                <th> consume_date </th>
+                <th> servings </th>
+                <th> food_text </th>
+
+             
+          
+            </tr>
+       
+     
+        {% for publisher in object_list %}
+        <tr>
+          
+            <td>{{ publisher.consume_date }}</td>
+            <td>{{ publisher.servings }}</td>
+            <td>{{ publisher.food_text }}</td>
+        
+          
+        </tr>    
+        {% endfor %}
+
+        
+        </table>    
+       
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+        </head>
+        <body>
+        
+       
+        
+{% endblock %}
+
+ 

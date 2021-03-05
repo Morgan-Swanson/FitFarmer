@@ -25,7 +25,17 @@ class UserForm(forms.ModelForm):
 
 
 class FoodForm(forms.ModelForm):
+    helper = FormHelper()
+    helper.form_id = 'full-food-form'
+    helper.form_method = 'post'
+    helper.layout = Layout(
+        Row(
+            Column(Fieldset('user','consume_date','servings','food_text'), css_class='col-sm'),
+            
+        ),
+        ButtonHolder(Submit("Submit", "Submit", css_class="btn-success"))
+    )
     class Meta:
         model = Food
-        fields = '__all__'
+        fields = ('user','consume_date','servings','food_text')
 

@@ -1,10 +1,76 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+
     <h2>Patients</h2>
-    <ul>
+        <table>
+            <tr>
+              <th>Name</th>
+              <th>Gender</th>
+              <th>BMI</th>
+              <th>weight</th>
+              <th>waist_cir</th>
+              <th>sys_bp</th>
+              <th>dia_bp</th>
+              <th>cholesterol</th>
+              <th>hdl</th>
+              <th>atherogenicity</th>
+              <th>fpg</th>
+              <th>hb_a1c</th>
+              <th>crp</th>
+              <th>pulse_ox</th>
+              <th>Food Intake</th>
+          
+            </tr>
+       
+     
         {% for publisher in object_list %}
-            <li>{{ publisher.name }}</li>
+        <tr>
+            <td>{{ publisher.name }}</td>
+            <td>{{ publisher.gender }}</td>
+            <td>{{ publisher.bmi }}</td>
+            <td>{{ publisher.weight }}</td>
+            <td>{{ publisher.waist_cir }}</td>
+            <td>{{ publisher.sys_bp }}</td>
+            <td>{{ publisher.dia_bp }}</td>
+            <td>{{ publisher.cholesterol }}</td>
+            <td>{{ publisher.hdl }}</td>
+            <td>{{ publisher.atherogenicity }}</td>
+            <td>{{ publisher.fpg }}</td>
+            <td>{{ publisher.hb_a1c }}</td>
+            <td>{{ publisher.crp }}</td>
+            <td>{{ publisher.pulse_ox }}</td>
+            <td><a href="\intake">Add Intake</a></td>
+          
+        </tr>    
         {% endfor %}
-    </ul>
+
+        
+        </table>    
+       
+    <style>
+        table {
+          font-family: arial, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #dddddd;
+        }
+        </style>
+        </head>
+        <body>
+        
+       
+        
 {% endblock %}
+
+ 
