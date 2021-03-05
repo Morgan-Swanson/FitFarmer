@@ -4,11 +4,10 @@ from crispy_forms.layout import Layout, Div, Field, Row, Column, Submit, Fieldse
 from fitfarmer.models import User, Food
 
 
-class NameForm(forms.ModelForm):
+class UserForm(forms.ModelForm):
     helper = FormHelper()
     helper.form_id = 'full-user-form'
     helper.form_method = 'post'
-    helper.form_action = 'register/submit'
     helper.layout = Layout(
         Row(
             Column(Fieldset('Basic Info', 'name', 'gender', 'bmi', 'weight', 'waist_cir'), css_class='col-sm'),
