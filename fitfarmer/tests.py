@@ -12,14 +12,13 @@ def test_macro_diagnosis():
     macros = getFoodMacros(foods)
     diagnoses = diagnose(user[0], macros)
     
-    print(macros)
     print(user)
     print(diagnoses)
 
 
 def test_msdps():
     week = datetime.datetime.today() - datetime.timedelta(7)
-    msdps_week = Food.objects.filter(consume_date__gte=week)
+    msdps_week = Food.objects.filter(user_id=1).filter(consume_date__gte=week)
     msdps_score = msdpsCalc(msdps_week)
 
     print(msdps_score)
