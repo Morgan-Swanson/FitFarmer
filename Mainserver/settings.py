@@ -20,7 +20,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '^%m$t6nx-)1jlic4$fgugwk+zi7q!t
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 # ALLOWED_HOSTS = ['localhost', '192.168.2.3', '127.0.0.1']
-
+ALLOWED_HOSTS = ['http://fitfarmer.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 
